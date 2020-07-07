@@ -509,19 +509,19 @@
           "start_val": 0.1,
           "end_val": 0.01,
           "start_step": 1000,
-          "end_step": 500000
+          "end_step": 2000
         },
         "gamma": 0.9,
-        "training_batch_iter": 1000,
+        "training_batch_iter": 100,
         "training_iter": 1,
-        "training_frequency": 100,
+        "training_frequency": 10,
         "training_start_step": 32,
         "normalize_state": false 
       },
       "memory": {
         "name": "Replay",
         "batch_size": 16,
-        "max_size": 50000,
+        "max_size": 2000,
         "use_cer": false 
       },
       "net": {
@@ -542,9 +542,9 @@
           "gamma": 0.999,
         },
         "update_type": "replace",
-        "update_frequency": 300,
+        "update_frequency": 10,
         "polyak_coef": 0,
-        "gpu": false
+        "gpu": true
       }
     }],
     "env": [{
@@ -552,7 +552,7 @@
       "action_dim": 300,
       "observation_dim": 392,
       "max_t": 40,
-      "max_frame": 500000,
+      "max_frame": 2000,
       "nlu": {
         "name": "OneNetLU",
         "model_file": "https://convlab.blob.core.windows.net/models/onenet.tar.gz"
